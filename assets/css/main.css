@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'euculid';
     src: local('euculid'),
-        url(/assets/fonts/euclid/Euclid\ Circular\ A\ Bold.ttf);
+        url(../fonts/euclid/Euclid\ Circular\ A\ Bold.ttf);
     font-weight: bold;
 
 }
@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'euculid';
     src: local('euculid'),
-        url(/assets/fonts/euclid/Euclid\ Circular\ A\ Light.ttf);
+        url(../fonts/euclid/Euclid\ Circular\ A\ Light.ttf);
     font-weight: 300;
 
 }
@@ -478,7 +478,7 @@ section {
 .advantages__item {
     border-radius: 10px;
     background-color: var(--dark);
-    background-image: url('/assets/images/advantages/line.png');
+    background-image: url('../images/advantages/line.png');
     background-position: top right;
     background-repeat: no-repeat;
     padding: 30px 22px 35px 30px;
@@ -613,7 +613,7 @@ section {
 .item__body {
     padding: 24px 20px 26px 30px;
     background-color: transparent;
-    background-image: url(/assets/images/news/form.png);
+    background-image: url(../images/news/form.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100% 146px;
