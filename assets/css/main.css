@@ -29,6 +29,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+button {
+    outline: none;
+}
+
 ul {
     list-style: none;
 }
@@ -49,6 +53,7 @@ body {
     --dark: #292D32;
     --graytext: #B7B7B7;
     --lightdark: #343A41;
+    --pagcolor: #929292;
     --color1: #EEEEEE;
 
 }
@@ -313,6 +318,180 @@ section:last-of-type {
 .rounded-btn_dark {
     background-color: var(--dark);
     border: 12px solid var(--white);
+}
+
+/* banner */
+.banner {
+    background-color: var(--border);
+    height: 683px;
+    padding-right: 0;
+    width: 100%;
+}
+
+.banner__content {
+    width: 100%;
+    position: relative;
+    display: grid;
+    max-width: calc(1920px - 260px);
+    grid-template-columns: 9fr 4fr;
+}
+
+.banner__scroll-to-catalog {
+    position: absolute;
+    z-index: 1;
+    top: 293px;
+    left: -70px;
+    transform: rotate(-90deg);
+}
+
+/* swiper */
+.swiper {
+    width: 100%;
+    position: relative;
+}
+
+.swiper__interactive {
+    position: absolute;
+    z-index: 2;
+    gap: 80px;
+    top: 498px;
+}
+
+.swiper__btn {
+    cursor: pointer;
+    outline: none;
+}
+
+/* Использую important т.к нужно перебить стандартные стили swiper'а */
+.swiper-pag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 23px;
+}
+
+.swiper-pagination-bullet {
+    transition: .3s !important;
+    background-color: var(--pagcolor) !important;
+    height: 5px !important;
+    width: 5px !important;
+    margin: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--dark) !important;
+    height: 9px !important;
+    width: 9px !important;
+}
+
+/* main-swiper */
+.main-swiper {}
+
+.main-swiper .swiper__interactive {
+    right: 40px;
+}
+
+.swiper__img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.swiper__bg-text {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Rubik Mono One', sans-serif;
+    pointer-events: none;
+    font-size: 254px;
+    position: absolute;
+    top: 36.4px;
+    z-index: 0;
+    left: -18px;
+    z-index: 0;
+    letter-spacing: -5px;
+}
+
+.swiper__content {
+    padding: 75px 55px 0 0;
+    height: 100%;
+    display: grid;
+    position: relative;
+    z-index: 1;
+    grid-template-columns: 1fr 1fr;
+}
+
+.swiper__element {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 160px;
+    padding-left: 130px;
+}
+
+.swiper__element .btn-wrapper {
+    margin-top: 60px;
+}
+
+.swiper__text {
+    color: var(--darkgray);
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: auto;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+.swiper__heading {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 58px;
+}
+
+/* secondary-swiper */
+.secondary-swiper {}
+
+.secondary-swiper .swiper__interactive {
+    left: 40px;
+}
+
+.secondary-swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+}
+
+.swiper__next-text {
+    margin-top: 57px;
+    max-width: 190px;
+    font-size: 25px;
+    line-height: 32.5px;
+    position: relative;
+    z-index: 2;
+    margin-left: 40px
+}
+
+.swiper__img-bg {
+    opacity: .3;
+    top: 0;
+    z-index: 1;
+    object-fit: fill;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* scroll to catalog */
+.scroll-to-catalog {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18.75;
+    color: var(--darkgray);
+    gap: 24.5px;
+}
+
+.scroll-to-catalog img {
+    margin-left: 10px;
+    transform: rotate(90deg);
 }
 
 /* catalog */
@@ -1025,17 +1204,20 @@ section:last-of-type {
         right: 15px;
         bottom: 15px;
     }
-    .main-footer__img{
+
+    .main-footer__img {
         width: 70px;
         height: 71px;
 
     }
-    .main-footer__listing li:first-of-type{
+
+    .main-footer__listing li:first-of-type {
         font-size: 18px;
         font-weight: 400;
         line-height: 21px;
         letter-spacing: 0em;
     }
+
     .main-footer__content {
         padding: 0 15px;
     }
@@ -1067,10 +1249,12 @@ section:last-of-type {
         font-size: 15px;
         line-height: 22.5px;
     }
-    .main-footer__links{
+
+    .main-footer__links {
         margin-top: 10px;
         gap: 30px;
     }
+
     .main-footer__links img {
         height: 30px;
         width: 30px;

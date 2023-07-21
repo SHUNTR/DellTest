@@ -21,3 +21,30 @@ submit.on('click', function () {
         return;
     }
 })
+
+// Инициализация слайдера
+const main_swiper = new Swiper('.main-swiper', {
+    loop: true,
+    navigation: {
+        nextEl: '.swiper__btn_next',
+    },
+    pagination: {
+        el: '.swiper-pag',
+        type: 'bullets',
+    },
+    keyboard: {
+        enabled: true,
+    },
+    autoplay: {
+        delay: 3000,
+    },
+})
+const secondary_swiper = new Swiper('.secondary-swiper', {
+    allowTouchMove: false,
+    direction: 'vertical',
+    loop: true,
+
+})
+
+main_swiper.controller.control = secondary_swiper;
+
