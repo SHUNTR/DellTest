@@ -69,7 +69,15 @@ section {
 section:last-of-type {
     margin-bottom: 0;
 }
-
+/* запрет выделения */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; 
+}
 /* main-header */
 .main-header {
     transition: .3s;

@@ -22,15 +22,17 @@ submit.on('click', function () {
     }
 })
 
+
+
 // Инициализация слайдера
 const main_swiper = new Swiper('.main-swiper', {
     loop: true,
-    navigation: {
-        nextEl: '.swiper__btn_next',
-    },
     pagination: {
         el: '.swiper-pag',
         type: 'bullets',
+    },
+    navigation: {
+        nextEl: '.swiper__btn_next',
     },
     keyboard: {
         enabled: true,
@@ -44,7 +46,12 @@ const secondary_swiper = new Swiper('.secondary-swiper', {
     direction: 'vertical',
     loop: true,
 
-})
+    navigation: {
+        nextEl: '.swiper__btn_next',
+    },
 
+})
+// Привязываем слайдеры друг к другу
 main_swiper.controller.control = secondary_swiper;
+secondary_swiper.controller.control = main_swiper;
 
