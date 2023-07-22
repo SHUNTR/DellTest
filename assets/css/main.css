@@ -73,8 +73,8 @@ section:last-of-type {
 .noselect,.noselect *{
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Old versions of Firefox */
+       -khtml-user-select: none;
+         -moz-user-select: none; /* Старые версии Firefox */
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; 
 }
@@ -1035,7 +1035,9 @@ section:last-of-type {
 .contacts__links {
     gap: 13px;
 }
-
+.contacts__textarea{
+    height: 145px;
+}
 .contacts__element:first-of-type .contacts__title {
     color: var(--dark);
 }
