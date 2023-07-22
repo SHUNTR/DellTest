@@ -7,7 +7,7 @@ $('.burger').on('click', function () {
 
 const [name, phone, submit] = [$('#name'), $('#phone'), $('.contacts__btn')];
 const SpecSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
-const Phonelayout = phone_pattern = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/;
+const Phonelayout = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/;
 
 phone.mask("+8(999) 999-9999");
 
